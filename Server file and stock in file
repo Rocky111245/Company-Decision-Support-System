@@ -1,0 +1,41 @@
+Stock_In.js
+The Stock_In.js file is a React component responsible for rendering a form to input stock information. It displays a table with four columns: "Date of Entry," "Product Name," "Company Name," and "Quantity." Users can enter stock information such as the date, select a product name, select a company name, and enter the quantity. They can add multiple rows of stock information, which will be displayed in the table.
+
+State Variables
+date: Stores the value of the date input field.
+productName: Stores the selected product name.
+companyName: Stores the selected company name.
+quantity: Stores the value of the quantity input field.
+productOptions: Stores the list of product options fetched from the API.
+companyOptions: Stores the list of company options fetched from the API.
+rows: Stores an array of stock information rows.
+useEffect
+The useEffect hook is used to fetch the product names and company names from the API when the component mounts. It makes two API calls: /api/product_names and /api/company_name.
+Upon successful API calls, the response data is stored in the productOptions and companyOptions state variables, respectively.
+The useEffect hook has an empty dependency array ([]), so it runs only once when the component mounts.
+Event Handlers
+handleDateChange: Updates the date state variable with the new value from the date input field.
+handleProductNameChange: Updates the productName state variable with the selected product name.
+handleCompanyNameChange: Updates the companyName state variable with the selected company name.
+handleQuantityChange: Updates the quantity state variable with the new value from the quantity input field.
+handleAddRow: Adds a new row of stock information to the rows state variable. It checks if all fields (date, product name, company name, quantity) are filled before adding the row. After adding the row, it resets the input values.
+Render
+The component renders a <div> element with the class name "stock-in."
+Inside the <div>, it renders an <h2> element with the class name "stock-in__title" displaying the title "Stock In."
+It also renders a <table> element with the class name "stock-in__table" to display the stock information table.
+The table has a <thead> section with column headers and a <tbody> section to display the rows of stock information.
+Inside the <tbody>, it maps over the rows state variable and renders a <tr> element for each row.
+Each <tr> element contains <td> elements for the date, product name, company name, and quantity.
+Below the existing rows, it renders an additional <tr> element to allow users to input new stock information.
+The input fields (date, product name, company name, quantity) and the "Add" button have event handlers associated with them.
+server.js
+The server.js file is a Node.js server file that uses the Express framework. It sets up an API to handle requests for product names and company names.
+
+It requires the necessary modules (express, ProductName, CompanyName, ProductIn) and creates an Express application (app).
+The server listens on a specified port (port), which is either obtained from the environment variable PORT or defaults to 5000.
+The API defines two routes:
+/api/product_names: Handles GET requests for product names. It uses the ProductName model to fetch all product names from the database and returns them as a JSON response.
+/api/company_name: Handles GET requests for company names. It uses the CompanyName model to fetch all company names from the database and returns them as a JSON response.
+In case of errors during the API calls, appropriate error handling is implemented, returning a JSON response with an error message and a 500 status code.
+The server starts listening for incoming requests when the listen method is called, and a console message is printed with the port number.
+Please note that the documentation provides a general overview of the functionality of the files. The exact implementation details may vary based on the specific code in your application.

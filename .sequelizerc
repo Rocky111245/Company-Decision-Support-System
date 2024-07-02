@@ -1,0 +1,11 @@
+//sequelize ORM, it helps make database table easily without going to mysql
+//Sequelize instance. Created when we want to use sequelize.It predefines the path for the model,migrations,seeders and the path to the database.
+
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve('config', 'database.js'),
+  'models-path': path.resolve('models'),
+  'seeders-path': path.resolve('seeders'),
+  'migrations-path': path.resolve('migrations')
+};

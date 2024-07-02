@@ -1,0 +1,7 @@
+These files are related to setting up a connection to a MySQL database using Sequelize ORM. Here's what each of them do:
+
+database.js: Contains the configuration options for the Sequelize instance, including the database dialect, host, port, database name, and define options for Sequelize models. This file exports a JavaScript object with the configuration options.
+company_name.js: Defines a Sequelize model for the Company_Names table in the database. This model defines the structure of the table columns, their data types, and any constraints such as primary keys, foreign keys, and unique indexes. This file exports the CompanyName model class.
+connection.js: Creates a Sequelize instance by instantiating a new Sequelize object with the configuration options from database.js. This file exports the connection object for use in other parts of the application.
+testConnection.js: Imports the connection object and the CompanyName model, and tests the connection to the database by calling the authenticate() method on the connection object. If the connection is successful, it synchronizes the CompanyName model with the database using the sync() method. Finally, it logs a success message to the console if the synchronization is successful.
+Overall, these files work together to establish a connection to a MySQL database and define the structure of the tables using Sequelize models.

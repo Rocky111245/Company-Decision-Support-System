@@ -1,0 +1,5 @@
+This is a Sequelize migration file for seeding data into the Company_Names table. The up function specifies the data to be inserted using an array of objects. Each object represents a company and has a companyName property.
+
+The queryInterface.bulkInsert method is used to insert the data into the Company_Names table. The first argument is the name of the table, the second argument is the array of data to be inserted, and the third argument is an options object (which is empty in this case).
+
+The down function specifies how to undo the changes made by the up function. In this case, it uses the queryInterface.bulkDelete method to delete all rows from the Company_Names table.

@@ -1,0 +1,27 @@
+/* CostsForm.css */
+.costs-form {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .costs-form__label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .costs-form__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .costs-form__calculated-value {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  

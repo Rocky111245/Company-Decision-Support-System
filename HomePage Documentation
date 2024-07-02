@@ -1,0 +1,9 @@
+In this code, we have a functional component named Homepage that represents the main page of the application. It imports a CSS file and a Navbar component that will be displayed at the top of the page.
+
+The Homepage component defines a state hook called activeTab which is used to keep track of the currently active tab on the Navbar component. It also defines a function handleTabClick that will be passed down to the Navbar component as a prop to handle the change of the active tab when a user clicks on a tab.
+
+In the return statement, we have a container div with a class name homepage-container. Inside this container, we render the Navbar component, passing down the activeTab and handleTabClick props.
+
+Then we have another div with a class name homepage-content that will contain the content of the homepage. Inside this div, we conditionally render different content based on the value of the activeTab state.
+
+For example, if the activeTab is 'Dashboard', we render a heading that says "Dashboard Content". If it is 'StockIn', we render a heading that says "Stock In Content", and so on.

@@ -1,0 +1,53 @@
+.container {  
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1.9fr 1.1fr 0.9fr;
+  grid-template-rows: 0fr 1.3fr 0.7fr;
+  gap: 1em;
+  grid-auto-flow: row;
+  
+  grid-template-areas:
+    "Navbar Navbar Navbar"
+    "topLeft topRight1 topRight2"
+    "bottomLeft bottomRight bottomRight";
+}
+
+.Navbar, .bottomLeft, .topLeft, .topRight1, .topRight2, .bottomRight {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f3f3f3;
+  padding: 1em; /* Padding for visual separation */
+}
+
+.Navbar { 
+  grid-area: Navbar; 
+}
+
+.bottomLeft { 
+  grid-area: bottomLeft; 
+}
+
+.topLeft { 
+  grid-area: topLeft; 
+}
+
+.topRight1 { 
+  grid-area: topRight1; 
+}
+
+.topRight2 { 
+  grid-area: topRight2; 
+}
+
+.bottomRight { 
+  grid-area: bottomRight; 
+}
+
+.Navbar, .bottomLeft, .topLeft, .topRight1, .topRight2, .bottomRight {
+  display: flex; /* This will enable Flexbox */
+  justify-content: center; /* This will center the content horizontally */
+  align-items: center; /* This will center the content vertically */
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f3f3f3;
+  padding: 1em; /* Padding for visual separation */
+}
